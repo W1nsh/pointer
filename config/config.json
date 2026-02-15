@@ -1,0 +1,30 @@
+{
+	"checkpoint": {
+		"border": {
+			"x": 50,
+			"y": 25
+		},
+		"indent": {
+			"x": 1,
+			"y": 1
+		},
+		"color": {
+			"r": 219,
+			"g": 255,
+			"b": 0
+		},
+		"del_last": true
+	},
+	"point": {
+		"x": 25,
+		"y": 25,
+		"color": {
+			"r": 150,
+			"g": 0,
+			"b": 255
+		},
+		"del_tail": true
+	},
+	"github_link": "https://github.com/w1nsh",
+	"tick": 100
+}
