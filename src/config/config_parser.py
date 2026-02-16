@@ -1,33 +1,27 @@
 import json
+from pathlib import Path
 
 from src.config.config import Config, Point
 from src.config.point import Color, Position
 
 
 class ConfigParser:
-	def __init__(self, path: str, encoding: str) -> None:
-		self.path = path
+	def __init__(self, config_path: Path, encoding: str) -> None:
+		self.config_path = config_path
 		self.encoding = encoding
 
 
-	def read(self) -> dict[str, dict[str, dict[str, int | dict[str, int]]]]:
-		with open(self.path, 'r', encoding=self.encoding) as f:
-			config = json.load(f)
-		return config
-
-
-	def parse(self, config: dict) -> Config:
+	def parse(self) -> Config:
+		config_content = self.config_path.read_text(encoding=self.encoding)
+		config = json.loads(config_content)
 		cp = config['checkpoint']
-		cp_b = cp['border']
-		cp_b_x = cp_b['x']
-		cp_b_y = cp_b['y']
-		cp_i = cp['indent']
-		cp_i_x = cp_i['x']
-		cp_i_y = cp_i['y']
-		cp_c = cp['color']
-		cp_c_r = cp_c['r']
-		cp_c_g = cp_c['g']
-		cp_c_b = cp_c['b']
+		cp_b_x = cp['border']['x']
+		cp_b_y = cp['border']['y']
+		cp_i_x = cp['indent']['x']
+		cp_i_y = cp['indent']['y']
+		cp_c_r = cp['color']['r']
+		cp_c_g = cp['color']['g']
+		cp_c_b = cp['color']['b']
 		cp_del_last = cp['del_last']
 		checkpoint_color = Color(cp_c_r, cp_c_g, cp_c_b)
 		checkpoint_indent = Position(cp_i_x, cp_i_y)
@@ -40,10 +34,9 @@ class ConfigParser:
 		p = config['point']
 		p_x = p['x']
 		p_y = p['y']
-		p_c = p['color']
-		p_c_r = p_c['r']
-		p_c_g = p_c['g']
-		p_c_b = p_c['b']
+		p_c_r = p['color']['r']
+		p_c_g = p['color']['g']
+		p_c_b = p['color']['b']
 		p_del_tail = p['del_tail']
 		point_color = Color(p_c_r, p_c_g, p_c_b)
 		point_position = Position(p_x, p_y)
@@ -53,6 +46,10 @@ class ConfigParser:
 		)
 		github_link = config['github_link']
 		tick = config['tick']
-		config_obj = Config(checkpoint, point, github_link, tick, p_del_tail, cp_del_last)
+		bgc_r = config['background_color']['r']
+		bgc_g = config['background_color']['g']
+		bgc_b = config['background_color']['b']
+		background_color = Color(bgc_r, bgc_g, bgc_b)
+		config_obj = Config(checkpoint, point, background_color, github_link, tick, p_del_tail, cp_del_last)
 		return config_obj
 	

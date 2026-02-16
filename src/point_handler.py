@@ -35,5 +35,5 @@ class PointHandler:
 		self.checkpoint_y = random.randint(self.border_indent_y, self.border_y - self.border_indent_y)
 
 
-	def pos_is_point(self) -> bool:
+	def point_is_checkpoint(self) -> bool:
 		return self.point_x == self.checkpoint_x and self.point_y == self.checkpoint_y

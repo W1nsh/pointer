@@ -16,15 +16,20 @@
 		"del_last": true
 	},
 	"point": {
-		"x": 25,
-		"y": 25,
+		"x": 0,
+		"y": 0,
 		"color": {
 			"r": 150,
 			"g": 0,
 			"b": 255
 		},
-		"del_tail": true
+		"del_tail": false
 	},
 	"github_link": "https://github.com/w1nsh",
-	"tick": 100
+	"tick": 100,
+	"background_color": {
+		"r": 0,
+		"g": 0,
+		"b": 0
+	}
 }

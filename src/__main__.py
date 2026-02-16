@@ -1,9 +1,11 @@
 import curses
 
+from pathlib import Path
+
 from src.app import App
 
 
-CONFIG_PATH = 'src\\config\\config.json' # Write your full path to config.json
+CONFIG_PATH = Path(__file__).parent.parent / 'config' / 'config.json'
 CONFIG_ENCODING = 'UTF-8'
 
 
