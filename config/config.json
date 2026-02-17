@@ -9,8 +9,8 @@
 			"y": 1
 		},
 		"color": {
-			"r": 219,
-			"g": 255,
+			"r": 255,
+			"g": 31,
 			"b": 0
 		},
 		"del_last": true
@@ -19,17 +19,17 @@
 		"x": 0,
 		"y": 0,
 		"color": {
-			"r": 150,
-			"g": 0,
-			"b": 255
+			"r": 255,
+			"g": 176,
+			"b": 0
 		},
-		"del_tail": false
+		"del_tail": true
 	},
 	"github_link": "https://github.com/w1nsh",
 	"tick": 100,
 	"background_color": {
-		"r": 0,
-		"g": 0,
-		"b": 0
+		"r": 79,
+		"g": 79,
+		"b": 79
 	}
 }

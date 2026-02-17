@@ -46,7 +46,7 @@ class App:
 							last_checkpoint_y,
 							last_checkpoint_x,
 							curses.ACS_BLOCK,
-							cp_point,
+							cp_del,
 						)
 					else:
 						screen.addch(
