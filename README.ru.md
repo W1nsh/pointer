@@ -7,22 +7,22 @@ Pointer - проект, генерирующий анимацию движени
 
 
 ## Изображения
-![dt-true_dl-true](imgs/dt-true_dl-true)
+![dt-true_dl-true](imgs/dt-true_dl-true.png)
 config:
  - del_tail: true
  - del_last: true
 
-![dt-true_dl-false](imgs/dt-true_dl-false)
+![dt-true_dl-false](imgs/dt-true_dl-false.png)
 config:
  - del_tail: true
  - del_last: false
 
-![dt-false_dl-true](imgs/dt-false_dl-true)
+![dt-false_dl-true](imgs/dt-false_dl-true.png)
 config:
  - del_tail: false
  - del_last: true
 
-![dt-false_dl-false](imgs/dt-false_dl-false)
+![dt-false_dl-false](imgs/dt-false_dl-false.png)
 config:
  - del_tail: false
  - del_last: false
